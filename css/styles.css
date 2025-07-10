@@ -175,7 +175,7 @@ input {
 
 .section-team {
   background-color: #f4f4fd;
-  padding: 120px 0;
+  padding: 96px 0;
 }
 .team-card {
   padding: 32px 0;
@@ -224,12 +224,12 @@ input {
   color: #2e2f42;
 }
 .list-team {
-  display: flex;
-  gap: 24px;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
   border-radius: 0 0 4px 4px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 72px;
 }
 .section-text {
   font-weight: 500;
@@ -250,17 +250,10 @@ input {
 }
 /* portfolio */
 .section-portfolio {
-  padding: 120px 0 120px 0;
+  padding: 96px 0 96px 0;
 }
 .section-title {
   margin-bottom: 72px;
-}
-.list-portfolio {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  column-gap: 24px;
-  row-gap: 48px;
 }
 .item-portfolio:hover,
 .item-portfolio:focus {
@@ -270,7 +263,6 @@ input {
 }
 .item-portfolio {
   cursor: pointer;
-  width: calc((100% - 48px) / 3);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .item-portfolio:hover .portfolio-hover,
@@ -303,6 +295,7 @@ input {
   padding: 32px 16px;
   border: 1px solid #e7e9fc;
   border-top: none;
+
 }
 /* footer */
 .footer-logo {
@@ -639,7 +632,6 @@ input::placeholder {
   color: #fff;
 } */
 
-/* Tablet */
 @media (max-width: 768px) {
   .button-menu {
     display: block;
@@ -650,18 +642,17 @@ input::placeholder {
   }
   .benefits-list {
     display: flex;
-align-items: flex-start;
-justify-content: flex-start;
-flex-direction: column;
-gap: 72px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 72px;
   }
 }
-
+/* Tablet */
 @media (min-width: 768px) {
   .container {
     margin: 0 16px;
     max-width: 768px;
-    
   }
   .header-nav {
     display: flex;
@@ -705,7 +696,7 @@ gap: 72px;
     font-weight: 400;
     font-size: 12px;
     line-height: 1.2;
-letter-spacing: 0.04em;
+    letter-spacing: 0.04em;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .nav-list .nav-item .nav-link:hover,
@@ -731,29 +722,29 @@ letter-spacing: 0.04em;
     background-color: #404bbf;
   }
 
-/* Hero */
-.section-hero {
-  max-width: 1440px;
-  padding: 188px 0;
-  background-image: linear-gradient(
-      to bottom,
-      rgba(46, 47, 66, 0.7),
-      rgba(46, 47, 66, 0.7)
-    ),
-    url("../images/dark-bgtablet@1x.jpg");
-}
-@media (min-resolution: 192dpi) {
+  /* Hero */
   .section-hero {
+    max-width: 1440px;
+    padding: 188px 0;
     background-image: linear-gradient(
         to bottom,
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url("../images/dark-bgtablet@2x.jpg");
+      url("../images/dark-bgtablet@1x.jpg");
   }
-}
-/* Benefits */
-  
+  @media (min-resolution: 192dpi) {
+    .section-hero {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url("../images/dark-bgtablet@2x.jpg");
+    }
+  }
+  /* Benefits */
+
   .benefits-list {
     display: flex;
     align-items: flex-start;
@@ -768,10 +759,10 @@ letter-spacing: 0.04em;
   .title-benefits {
     text-align: start;
   }
-
+  
 }
 
-@media screen and (max-width:1158px) {
+@media screen and (max-width: 1158px) {
   .title-benefits {
     margin-bottom: 8px;
   }
@@ -794,7 +785,7 @@ letter-spacing: 0.04em;
     padding: 24px 0;
     font-size: 16px;
     line-height: 1.5;
-    letter-spacing: 0.02em; 
+    letter-spacing: 0.02em;
   }
   .list-cont {
     gap: 40px;
@@ -832,10 +823,11 @@ letter-spacing: 0.04em;
     font-size: 20px;
   }
   .title-text {
-    font-weight: 400;}
-.section-benefits {
-  padding: 120px 0;
-}
+    font-weight: 400;
+  }
+  .section-benefits {
+    padding: 120px 0;
+  }
   .icon-bnf {
     display: flex;
     align-items: center;
@@ -853,6 +845,31 @@ letter-spacing: 0.04em;
   }
   .benefits-list {
     flex-direction: row;
-      gap: 24px;
-    }
+    gap: 24px;
   }
+  /* section team desctop */
+  .section-team {
+    padding: 120px 0;
+  }
+  .list-team {
+    flex-direction: row;
+    gap: 24px;
+    justify-content: center;
+  }
+
+  /* Portfolio desctop */
+  .section-portfolio {
+    padding: 120px 0 120px 0;
+  }
+   .item-portfolio {
+    width: calc((100% - 48px) / 3);
+  }
+  .list-portfolio {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 48px;
+  }
+ 
+}
