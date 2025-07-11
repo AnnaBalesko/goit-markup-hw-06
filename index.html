@@ -38,8 +38,8 @@
             <li class="nav-item"><a class="nav-link" href="">Contacts</a></li>
           </ul>
         </nav>
-        <button class="button-menu" type="button">
-          <svg class="icon-btn button" width="24" height="24">
+        <button class="button-menu" type="button" data-menu-open>
+          <svg class="icon-btn-burger" width="24" height="24">
             <use href="./images/icons.svg#icon-solid-menu"></use>
           </svg>
         </button>
@@ -61,19 +61,93 @@
           </ul>
         </address>
       </div>
+      <div class="mobile-menu is-open" data-menu>
+        <div class="container mobile-menu-container">
+          <button class="mobile-menu-close" type="button" data-menu-close>
+            <svg class="menu-close" width="8" height="8">
+              <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+          <nav class="mobile-menu-nav">
+            <ul class="mobile-nav-list">
+              <li class="mobile-nav-item">
+                <a class="mobile-nav-link" href="./index.html">Studio</a>
+              </li>
+              <li class="mobile-nav-item">
+                <a class="mobile-nav-link" href="">Portfolio</a>
+              </li>
+              <li class="mobile-nav-item">
+                <a class="mobile-nav-link" href="">Contacts</a>
+              </li>
+            </ul>
+          </nav>
+          <address class="mobile-header-addredd">
+            <ul class="mobile-list-cont">
+              <li class="mobile-contacts-item">
+                <a
+                  class="mobile-contacts-link"
+                  href="tel:+110001111111"
+                  target="_blank"
+                  >+11 (000) 111-11-11</a
+                >
+              </li>
+              <li class="mobile-contacts-item">
+                <a
+                  class="mobile-contacts-link"
+                  href="mailto:info@devstudio.com"
+                  target="_blank"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+          </address>
+          <ul class="mobile-social-list">
+            <li class="mobile-social-items">
+              <a href="#" class="mobile-social-link">
+                <svg class="icon-mobile-social" width="24" height="24">
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mobile-social-items">
+              <a href="#" class="mobile-social-link">
+                <svg class="icon-mobile-social" width="24" height="24">
+                  <use href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mobile-social-items">
+              <a href="#" class="mobile-social-link">
+                <svg class="icon-mobile-social" width="24" height="24">
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mobile-social-items">
+              <a href="#" class="mobile-social-link">
+                <svg class="icon-mobile-social" width="24" height="24">
+                  <use href="./images/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </header>
 
     <!-- ========= Main ========== -->
 
     <main>
-      <section class="section-hero">
+      <section class="hidden section-hero">
         <div class="container">
           <h1 class="hero-title">Effective Solutions for Your Business</h1>
-          <button class="hero-btn" type="button">Order Service</button>
+          <button class="hero-btn" type="button" data-modal-open>
+            Order Service
+          </button>
         </div>
       </section>
 
-      <section class="section-benefits">
+      <section class="hidden section-benefits">
         <div class="container">
           <h2 hidden class="our-advantages visually-hidden">Our advantages</h2>
           <ul class="benefits-list">
@@ -129,7 +203,7 @@
         </div>
       </section>
 
-      <section class="section-team">
+      <section class="hidden section-team">
         <div class="container">
           <h2 class="section-title">Our Team</h2>
           <ul class="list-team">
@@ -178,7 +252,7 @@
             </li>
             <li class="item-team">
               <img
-              srcset="./images/Tom.jpg 1x, ./images/tom@2x.jpg 2x"
+                srcset="./images/Tom.jpg 1x, ./images/tom@2x.jpg 2x"
                 src="./images/Tom.jpg"
                 alt="Tom_Ford"
                 width="264"
@@ -221,7 +295,7 @@
             </li>
             <li class="item-team">
               <img
-              srcset="./images/Camila.jpg 1x, ./images/camila@2x.jpg 2x"
+                srcset="./images/Camila.jpg 1x, ./images/camila@2x.jpg 2x"
                 src="./images/Camila.jpg"
                 alt="Camila_Garcia"
                 width="264"
@@ -264,7 +338,7 @@
             </li>
             <li class="item-team">
               <img
-              srcset="./images/Daniel.jpg 1x, ./images/daniel@2x.jpg 2x"
+                srcset="./images/Daniel.jpg 1x, ./images/daniel@2x.jpg 2x"
                 src="./images/Daniel.jpg"
                 alt="Daniel_Wilson"
                 width="264"
@@ -308,14 +382,17 @@
           </ul>
         </div>
       </section>
-      <section class="section-portfolio">
+      <section class="hidden section-portfolio">
         <div class="container">
           <h2 class="section-title">Our Portfolio</h2>
           <ul class="list-portfolio">
             <li class="item-portfolio">
               <div class="image-hover">
                 <img
-                srcset="./images/BankingApp.jpg 1x, ./images/BankingApp@2x.jpg 2x"
+                  srcset="
+                    ./images/BankingApp.jpg    1x,
+                    ./images/BankingApp@2x.jpg 2x
+                  "
                   src="./images/BankingApp.jpg"
                   alt="BankingApp"
                   width="360"
@@ -426,7 +503,7 @@
       </section>
     </main>
     <!-- ============ Footer ======= -->
-    <footer class="end-page">
+    <footer class="hidden end-page">
       <div class="container">
         <div class="container-logo">
           <a class="footer-logo" href="./index.html"
@@ -492,9 +569,9 @@
     </footer>
 
     <!-- Modal form -->
-    <div class="modal-overlay is-open">
+    <div class="hidden modal-overlay is-open" data-modal>
       <div class="modal-window">
-        <button class="icon-btn" type="button">
+        <button class="icon-btn" type="button" data-modal-close>
           <svg class="icon-close" width="8" height="8">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
@@ -584,5 +661,7 @@
         </form>
       </div>
     </div>
+    <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
